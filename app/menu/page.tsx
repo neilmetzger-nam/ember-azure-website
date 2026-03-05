@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Image from "next/image";
+import MenuContent from "./MenuContent";
 
 export const metadata: Metadata = {
   title: "Menu | Ember & Azure",
@@ -308,59 +308,7 @@ export default function MenuPage() {
         <div className="mx-auto mt-4 h-px w-16 bg-ember" />
       </div>
 
-      {/* Menu sections */}
-      <div className="mx-auto mt-16 max-w-4xl px-6">
-        {menuSections.map((section) => (
-          <div key={section.title} className="mb-20">
-            <h2 className="font-heading text-3xl font-bold text-ember">
-              {section.title}
-            </h2>
-            {section.subtitle && (
-              <p className="mt-1 text-sm text-warm-white/40">
-                {section.subtitle}
-              </p>
-            )}
-            <div className="mt-2 h-px w-12 bg-ember" />
-
-            <div className="mt-8 space-y-6">
-              {section.items.map((item) => (
-                <div
-                  key={item.name}
-                  className="flex gap-4 border-b border-white/5 pb-6"
-                >
-                  <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-md">
-                    <Image
-                      src={item.image}
-                      alt={item.alt}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="min-w-0 flex-1">
-                    <div className="flex items-baseline justify-between gap-4">
-                      <h3 className="font-heading text-lg font-bold text-warm-white">
-                        {item.name}
-                      </h3>
-                      <span className="shrink-0 text-sm font-medium text-gold">
-                        {item.price}
-                      </span>
-                    </div>
-                    <p className="mt-1 text-sm text-warm-white/50">
-                      {item.description}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {section.footnote && (
-              <p className="mt-6 text-center text-xs italic text-warm-white/40">
-                {section.footnote}
-              </p>
-            )}
-          </div>
-        ))}
-      </div>
+      <MenuContent sections={menuSections} />
     </div>
   );
 }

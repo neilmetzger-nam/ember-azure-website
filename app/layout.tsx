@@ -17,9 +17,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Ember & Azure | Wood Fire & Raw Bar | Village at Leesburg",
+  title: "Ember & Azure | Wood Fire Restaurant | Village at Leesburg",
   description:
-    "Upscale casual Pan-Asian wood-fire restaurant featuring a full bar, raw bar, and creative cuisine. Opening 2026 at Village at Leesburg, Virginia.",
+    "Asian-inspired wood-fire cuisine, raw bar, and craft cocktails. Opening 2026 at Village at Leesburg, Virginia.",
 };
 
 export default function RootLayout({

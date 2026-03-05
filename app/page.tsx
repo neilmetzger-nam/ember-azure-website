@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import EmberParticles from "./components/EmberParticles";
 
 const featuredDishes = [
@@ -7,18 +8,21 @@ const featuredDishes = [
     description:
       "Seven skewers chosen by the chef, each kissed by binchotan charcoal. A journey through fire.",
     price: "$38",
+    imageComment: "TODO: yakitori-skewers.webp",
   },
   {
     name: "Whole Fire-Roasted Fish",
     description:
       "Whole bronzino roasted over open flame, draped in green curry with kaffir lime and Thai basil.",
     price: "$42",
+    imageComment: "TODO: whole-fish.webp",
   },
   {
     name: "Raw Bar Tower",
     description:
       "Oysters, king crab, hamachi crudo, and seasonal shellfish — a monument to the sea.",
     price: "Market Price",
+    imageComment: "TODO: raw-bar-tower.webp",
   },
 ];
 
@@ -42,8 +46,14 @@ export default function Home() {
     <>
       {/* Hero */}
       <section className="relative flex min-h-screen items-center justify-center overflow-hidden">
-        {/* IMAGE: wood-fire-grill-hero.jpg */}
-        <div className="absolute inset-0 bg-gradient-to-b from-charcoal via-charcoal/90 to-charcoal" />
+        <Image
+          src="/images/wood-fire-grill-1.webp"
+          alt="Wood fire grill at Ember & Azure"
+          fill
+          priority
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/80" />
 
         {/* Subtle ember glow at bottom */}
         <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-ember/10 to-transparent" />
@@ -92,11 +102,11 @@ export default function Home() {
           <div className="mx-auto mt-4 h-px w-16 bg-ember" />
           <p className="mt-8 text-lg leading-relaxed text-warm-white/70">
             Ember &amp; Azure is where primal fire meets the cool elegance of the sea.
-            Our floor-to-ceiling wood fire grill is the heart of every dish — charring,
-            smoking, and coaxing deep flavors from the finest ingredients. At the raw bar,
-            pristine shellfish and delicate crudo offer a counterpoint of purity. This is
-            Pan-Asian cuisine reimagined through flame and water, bold yet refined,
-            theatrical yet deeply personal.
+            Our 48-inch wood fire grill anchors the room. The fire glows behind
+            hand-laid tile — you feel its warmth from every seat in the house.
+            At the raw bar, pristine shellfish and delicate crudo offer a counterpoint
+            of purity. This is Pan-Asian cuisine reimagined through flame and water,
+            bold yet refined, theatrical yet deeply personal.
           </p>
         </div>
       </section>
@@ -115,7 +125,7 @@ export default function Home() {
                 key={dish.name}
                 className="group overflow-hidden rounded-sm border border-white/5 bg-white/[0.02] transition-all hover:border-ember/30"
               >
-                {/* IMAGE: featured-dish placeholder */}
+                {/* {dish.imageComment} */}
                 <div className="h-56 bg-gradient-to-br from-charcoal via-charcoal to-ember/20" />
                 <div className="p-6">
                   <div className="flex items-baseline justify-between">

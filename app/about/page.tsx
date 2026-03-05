@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "About | Ember & Azure",
@@ -51,25 +52,32 @@ export default function AboutPage() {
           <div className="grid gap-16 md:grid-cols-2">
             {/* Fire */}
             <div>
-              {/* IMAGE: open-flame-cooking.jpg */}
-              <div className="mb-8 h-64 rounded-sm bg-gradient-to-br from-charcoal to-ember/20" />
+              <div className="relative mb-8 h-64 overflow-hidden rounded-md shadow-lg">
+                <Image
+                  src="/images/wood-fire-grill-2.webp"
+                  alt="Wood fire grill with flames behind hand-laid tile"
+                  fill
+                  className="object-cover"
+                />
+              </div>
               <h2 className="font-heading text-3xl font-bold text-ember">
                 The Fire
               </h2>
               <div className="mt-3 h-px w-12 bg-ember" />
               <p className="mt-6 leading-relaxed text-warm-white/60">
-                Oak, cherry, and applewood fuel our grill. We use binchotan
-                charcoal for yakitori, open flame for whole fish, and low-and-slow
-                smoke for ribs. Every cut of wood matters. Every ember tells a
-                story. This is cooking at its most elemental — and at its most
-                delicious.
+                Our 48-inch wood fire grill anchors the room. The fire glows
+                behind hand-laid tile — you feel its warmth from every seat in
+                the house. Oak, cherry, and applewood fuel the flames. We use
+                binchotan charcoal for yakitori, open flame for whole fish, and
+                low-and-slow smoke for ribs. Every cut of wood matters. Every
+                ember tells a story.
               </p>
             </div>
 
             {/* Water */}
             <div>
-              {/* IMAGE: raw-bar-oysters.jpg */}
-              <div className="mb-8 h-64 rounded-sm bg-gradient-to-br from-charcoal to-azure/20" />
+              {/* TODO: raw-bar-oysters.webp */}
+              <div className="mb-8 h-64 rounded-md bg-gradient-to-br from-charcoal to-azure/20 shadow-lg" />
               <h2 className="font-heading text-3xl font-bold text-azure">
                 The Water
               </h2>

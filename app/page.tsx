@@ -113,6 +113,74 @@ export default function Home() {
         </div>
       </section>
 
+      {/* From the Fire — Text Section */}
+      <section className="bg-stone-950 px-6 py-20">
+        <div className="mx-auto max-w-3xl text-center">
+          <h2 className="font-heading text-3xl font-bold text-ember md:text-4xl">
+            Every dish begins here.
+          </h2>
+          <div className="mx-auto mt-4 h-px w-16 bg-ember" />
+          <p className="mt-8 text-lg leading-relaxed text-warm-white/70">
+            Our 48-inch wood fire grill is the heart of Ember &amp; Azure. Every
+            protein, every vegetable — touched by real flame before it reaches
+            your plate.
+          </p>
+        </div>
+      </section>
+
+      {/* Two Worlds */}
+      <section className="bg-stone-950 px-6 py-20">
+        <div className="mx-auto max-w-6xl">
+          <div className="grid gap-10 md:grid-cols-2">
+            {/* From the Fire */}
+            <div>
+              <div className="overflow-hidden rounded-lg">
+                <video
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="h-full w-full object-cover"
+                >
+                  <source src="/videos/ember-azure-hero.mp4" type="video/mp4" />
+                </video>
+              </div>
+              <h3 className="mt-4 font-heading text-xl font-bold text-ember">
+                From the Fire
+              </h3>
+              <p className="mt-1 text-sm text-warm-white/50">
+                Wood fire. Every protein. Every night.
+              </p>
+            </div>
+
+            {/* Date Night */}
+            <div>
+              <div className="overflow-hidden rounded-lg">
+                <video
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="h-full w-full object-cover"
+                >
+                  <source src="/videos/date-night-hero.mp4" type="video/mp4" />
+                </video>
+              </div>
+              <h3 className="mt-4 font-heading text-xl font-bold text-azure">
+                Date Night
+              </h3>
+              <p className="mt-1 text-sm text-warm-white/50">
+                Raw bar. Fine wine. Someone worth impressing.
+              </p>
+            </div>
+          </div>
+
+          <p className="mt-12 text-center font-heading text-2xl font-bold text-warm-white md:text-3xl">
+            Two elements. One kitchen.
+          </p>
+        </div>
+      </section>
+
       {/* Featured Dishes */}
       <section className="bg-charcoal px-6 py-24">
         <div className="mx-auto max-w-6xl">
@@ -151,21 +219,6 @@ export default function Home() {
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* From the Fire — Text Section */}
-      <section className="bg-stone-950 px-6 py-20">
-        <div className="mx-auto max-w-3xl text-center">
-          <h2 className="font-heading text-3xl font-bold text-ember md:text-4xl">
-            Every dish begins here.
-          </h2>
-          <div className="mx-auto mt-4 h-px w-16 bg-ember" />
-          <p className="mt-8 text-lg leading-relaxed text-warm-white/70">
-            Our 48-inch wood fire grill is the heart of Ember &amp; Azure. Every
-            protein, every vegetable — touched by real flame before it reaches
-            your plate.
-          </p>
         </div>
       </section>
 

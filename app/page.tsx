@@ -155,6 +155,40 @@ export default function Home() {
         </div>
       </section>
 
+      {/* From the Fire — Video Section */}
+      <section className="bg-charcoal px-6 py-24">
+        <div className="mx-auto grid max-w-6xl items-center gap-12 md:grid-cols-2">
+          <div className="overflow-hidden rounded-lg shadow-xl">
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="h-full w-full object-cover"
+            >
+              <source src="/videos/whole-fish-grill.mp4" type="video/mp4" />
+              <source src="/videos/pork-ribs-on-grill.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div>
+            <h2 className="font-heading text-3xl font-bold text-ember md:text-4xl">
+              From the Fire
+            </h2>
+            <div className="mt-4 h-px w-16 bg-ember" />
+            <p className="mt-8 text-lg leading-relaxed text-warm-white/70">
+              Every protein we serve passes through our 48-inch wood fire grill.
+              You&apos;ll hear it crackle. You&apos;ll smell the smoke.
+              You&apos;ll taste the difference.
+            </p>
+            <p className="mt-4 text-sm leading-relaxed text-warm-white/50">
+              Oak, cherry, and applewood fuel the flames. Binchotan charcoal
+              for yakitori. Open flame for whole fish. Low-and-slow smoke for
+              ribs. Fire is not just how we cook — it&apos;s who we are.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Raw Bar Callout */}
       <section className="relative overflow-hidden px-6 py-24">
         <Image
@@ -163,7 +197,7 @@ export default function Home() {
           fill
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-[#0096c7]/80" />
+        <div className="absolute inset-0 bg-[#0096c7]/70" />
         <div className="relative z-10 mx-auto max-w-4xl">
           <h2 className="font-heading text-3xl font-bold text-azure md:text-4xl">
             The Raw Bar

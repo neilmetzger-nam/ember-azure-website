@@ -76,7 +76,7 @@ export default function AboutPage() {
 
             {/* Water */}
             <div>
-              <div className="relative mb-8 h-64 overflow-hidden rounded-md shadow-lg">
+              <div className="relative mb-8 h-96 overflow-hidden rounded-lg shadow-lg">
                 <Image
                   src="/images/raw-bar-tower-1.webp"
                   alt="Raw bar tower with oysters and fresh shellfish"

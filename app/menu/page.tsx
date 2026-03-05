@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Menu | Ember & Azure",
@@ -9,6 +10,8 @@ interface MenuItem {
   name: string;
   description: string;
   price: string;
+  image?: string;
+  alt?: string;
 }
 
 interface MenuSection {
@@ -26,6 +29,8 @@ const menuSections: MenuSection[] = [
         name: "Oysters on the Half Shell (6pc)",
         description: "East coast selection, mignonette, cocktail sauce, lemon",
         price: "$24",
+        image: "/images/raw-bar-tower-1.webp",
+        alt: "Fresh oysters and raw bar selection",
       },
       {
         name: "Hamachi Crudo",
@@ -47,6 +52,8 @@ const menuSections: MenuSection[] = [
         description:
           "Oysters, crab legs, shrimp, hamachi crudo — for two or more",
         price: "Market",
+        image: "/images/raw-bar-tower-1.webp",
+        alt: "Seasonal shellfish tower",
       },
     ],
   },
@@ -59,16 +66,22 @@ const menuSections: MenuSection[] = [
         description:
           "Chef's selection, binchotan grilled — thigh, breast, meatball, skin, heart, liver, tsukune",
         price: "$38",
+        image: "/images/yakitori-skewers-1.webp",
+        alt: "Yakitori skewers grilled over binchotan charcoal",
       },
       {
         name: "Whole Bronzino",
         description: "Green curry, kaffir lime, Thai basil, charred scallion",
         price: "$42",
+        image: "/images/whole-fish-1.webp",
+        alt: "Whole bronzino roasted over wood fire",
       },
       {
         name: "Slow-Roasted Pork Ribs",
         description: "Tamarind glaze, pickled daikon, cilantro, toasted peanut",
         price: "$34",
+        image: "/images/pork-ribs-1.webp",
+        alt: "Slow-roasted pork ribs with tamarind glaze",
       },
       {
         name: "Miso Black Cod",
@@ -210,19 +223,31 @@ export default function MenuPage() {
               {section.items.map((item) => (
                 <div
                   key={item.name}
-                  className="group border-b border-white/5 pb-6"
+                  className="group flex gap-4 border-b border-white/5 pb-6"
                 >
-                  <div className="flex items-baseline justify-between gap-4">
-                    <h3 className="font-heading text-lg font-bold text-warm-white">
-                      {item.name}
-                    </h3>
-                    <span className="shrink-0 text-sm font-medium text-gold">
-                      {item.price}
-                    </span>
+                  {item.image && (
+                    <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-md">
+                      <Image
+                        src={item.image}
+                        alt={item.alt || item.name}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                  )}
+                  <div className="min-w-0 flex-1">
+                    <div className="flex items-baseline justify-between gap-4">
+                      <h3 className="font-heading text-lg font-bold text-warm-white">
+                        {item.name}
+                      </h3>
+                      <span className="shrink-0 text-sm font-medium text-gold">
+                        {item.price}
+                      </span>
+                    </div>
+                    <p className="mt-1 text-sm text-warm-white/50">
+                      {item.description}
+                    </p>
                   </div>
-                  <p className="mt-1 text-sm text-warm-white/50">
-                    {item.description}
-                  </p>
                 </div>
               ))}
             </div>

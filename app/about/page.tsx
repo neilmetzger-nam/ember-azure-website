@@ -76,8 +76,14 @@ export default function AboutPage() {
 
             {/* Water */}
             <div>
-              {/* TODO: raw-bar-oysters.webp */}
-              <div className="mb-8 h-64 rounded-md bg-gradient-to-br from-charcoal to-azure/20 shadow-lg" />
+              <div className="relative mb-8 h-64 overflow-hidden rounded-md shadow-lg">
+                <Image
+                  src="/images/raw-bar-tower-1.webp"
+                  alt="Raw bar tower with oysters and fresh shellfish"
+                  fill
+                  className="object-cover"
+                />
+              </div>
               <h2 className="font-heading text-3xl font-bold text-azure">
                 The Water
               </h2>

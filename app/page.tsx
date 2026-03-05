@@ -8,21 +8,24 @@ const featuredDishes = [
     description:
       "Seven skewers chosen by the chef, each kissed by binchotan charcoal. A journey through fire.",
     price: "$38",
-    imageComment: "TODO: yakitori-skewers.webp",
+    image: "/images/yakitori-skewers-1.webp",
+    alt: "Yakitori skewers grilled over binchotan charcoal",
   },
   {
     name: "Whole Fire-Roasted Fish",
     description:
       "Whole bronzino roasted over open flame, draped in green curry with kaffir lime and Thai basil.",
     price: "$42",
-    imageComment: "TODO: whole-fish.webp",
+    image: "/images/whole-fish-1.webp",
+    alt: "Whole fire-roasted bronzino with green curry",
   },
   {
     name: "Raw Bar Tower",
     description:
       "Oysters, king crab, hamachi crudo, and seasonal shellfish — a monument to the sea.",
     price: "Market Price",
-    imageComment: "TODO: raw-bar-tower.webp",
+    image: "/images/raw-bar-tower-1.webp",
+    alt: "Raw bar tower with oysters, crab, and crudo",
   },
 ];
 
@@ -125,8 +128,14 @@ export default function Home() {
                 key={dish.name}
                 className="group overflow-hidden rounded-sm border border-white/5 bg-white/[0.02] transition-all hover:border-ember/30"
               >
-                {/* {dish.imageComment} */}
-                <div className="h-56 bg-gradient-to-br from-charcoal via-charcoal to-ember/20" />
+                <div className="relative h-60 overflow-hidden">
+                  <Image
+                    src={dish.image}
+                    alt={dish.alt}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
                 <div className="p-6">
                   <div className="flex items-baseline justify-between">
                     <h3 className="font-heading text-xl font-bold text-warm-white">
@@ -148,8 +157,13 @@ export default function Home() {
 
       {/* Raw Bar Callout */}
       <section className="relative overflow-hidden px-6 py-24">
-        {/* IMAGE: raw-bar-spread.jpg */}
-        <div className="absolute inset-0 bg-gradient-to-r from-charcoal via-charcoal/95 to-azure/20" />
+        <Image
+          src="/images/raw-bar-tower-1.webp"
+          alt="Raw bar tower with fresh shellfish"
+          fill
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-[#0096c7]/80" />
         <div className="relative z-10 mx-auto max-w-4xl">
           <h2 className="font-heading text-3xl font-bold text-azure md:text-4xl">
             The Raw Bar

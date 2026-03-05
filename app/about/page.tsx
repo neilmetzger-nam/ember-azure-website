@@ -78,8 +78,8 @@ export default function AboutPage() {
             <div>
               <div className="relative mb-8 h-96 overflow-hidden rounded-lg shadow-lg">
                 <Image
-                  src="/images/raw-bar-tower-1.webp"
-                  alt="Raw bar tower with oysters and fresh shellfish"
+                  src="/images/seafood-tower-1.webp"
+                  alt="Seafood tower with oysters and fresh shellfish"
                   fill
                   className="object-cover"
                 />

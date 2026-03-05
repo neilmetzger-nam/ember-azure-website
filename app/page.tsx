@@ -24,7 +24,7 @@ const featuredDishes = [
     description:
       "Oysters, king crab, hamachi crudo, and seasonal shellfish — a monument to the sea.",
     price: "Market Price",
-    image: "/images/raw-bar-tower-1.webp",
+    image: "/images/seafood-tower-1.webp",
     alt: "Raw bar tower with oysters, crab, and crudo",
   },
 ];
@@ -33,14 +33,32 @@ const cocktails = [
   {
     name: "Ember Negroni",
     description: "Mezcal, Campari, sweet vermouth, smoked orange peel",
+    image: "/images/cocktail-negroni-1.webp",
+    alt: "Ember Negroni with smoked orange peel",
   },
   {
-    name: "Azure Mule",
-    description: "Butterfly pea gin, lime, ginger beer, shifting from blue to violet",
+    name: "Tokyo Mule",
+    description: "Butterfly pea gin, yuzu, ginger beer, blue-to-violet gradient",
+    image: "/images/cocktail-tokyo-mule-1.webp",
+    alt: "Tokyo Mule shifting blue to violet",
   },
   {
     name: "Fire & Ice",
     description: "Jalapeño tequila, yuzu, coconut cream, torched pineapple",
+    image: "/images/cocktail-fire-ice-1.webp",
+    alt: "Fire and Ice cocktail with torched pineapple",
+  },
+  {
+    name: "Lychee Saketini",
+    description: "Junmai sake, lychee liqueur, elderflower, lime",
+    image: "/images/cocktail-saketini-1.webp",
+    alt: "Lychee Saketini with elderflower",
+  },
+  {
+    name: "Smoked Old Fashioned",
+    description: "Japanese whisky, demerara, Angostura, cedarwood smoke",
+    image: "/images/cocktail-old-fashioned-1.webp",
+    alt: "Smoked Old Fashioned with cedarwood smoke",
   },
 ];
 
@@ -261,17 +279,28 @@ export default function Home() {
           </h2>
           <div className="mx-auto mt-4 h-px w-16 bg-gold" />
 
-          <div className="mt-16 grid gap-8 md:grid-cols-3">
+          <div className="mt-16 grid gap-8 md:grid-cols-3 lg:grid-cols-5">
             {cocktails.map((drink) => (
-              <div key={drink.name} className="text-center">
-                {/* IMAGE: cocktail placeholder */}
-                <div className="mx-auto h-48 w-48 rounded-full bg-gradient-to-br from-charcoal to-ember/15" />
-                <h3 className="mt-6 font-heading text-xl font-bold text-gold">
-                  {drink.name}
-                </h3>
-                <p className="mt-2 text-sm text-warm-white/50">
-                  {drink.description}
-                </p>
+              <div
+                key={drink.name}
+                className="overflow-hidden rounded-lg border border-white/5 bg-white/[0.02]"
+              >
+                <div className="relative h-48 w-full">
+                  <Image
+                    src={drink.image}
+                    alt={drink.alt}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-4 text-center">
+                  <h3 className="font-heading text-lg font-bold text-gold">
+                    {drink.name}
+                  </h3>
+                  <p className="mt-1 text-sm text-warm-white/50">
+                    {drink.description}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
@@ -287,10 +316,10 @@ export default function Home() {
             </h2>
             <div className="mt-4 h-px w-12 bg-ember" />
             <div className="mt-6 space-y-2 text-warm-white/60">
-              <p>Tuesday – Thursday: 5:00 PM – 10:00 PM</p>
-              <p>Friday – Saturday: 5:00 PM – 11:00 PM</p>
-              <p>Sunday: 5:00 PM – 9:00 PM</p>
-              <p>Monday: Closed</p>
+              <p>Monday – Tuesday: 5:00 PM – 10:00 PM</p>
+              <p>Wednesday – Thursday: 11:30 AM – 3:00 PM, 5:00 PM – 10:00 PM</p>
+              <p>Friday – Saturday: 11:30 AM – 3:00 PM, 5:00 PM – 12:00 AM</p>
+              <p>Sunday: 11:30 AM – 3:00 PM, 5:00 PM – 10:00 PM</p>
             </div>
           </div>
           <div>

@@ -48,10 +48,10 @@ export default function ContactPage() {
               </h2>
               <div className="mt-3 h-px w-12 bg-azure" />
               <div className="mt-4 space-y-1 text-warm-white/60">
-                <p>Tuesday – Thursday: 5:00 PM – 10:00 PM</p>
-                <p>Friday – Saturday: 5:00 PM – 11:00 PM</p>
-                <p>Sunday: 5:00 PM – 9:00 PM</p>
-                <p>Monday: Closed</p>
+                <p>Monday – Tuesday: 5:00 PM – 10:00 PM</p>
+                <p>Wednesday – Thursday: 11:30 AM – 3:00 PM, 5:00 PM – 10:00 PM</p>
+                <p>Friday – Saturday: 11:30 AM – 3:00 PM, 5:00 PM – 12:00 AM</p>
+                <p>Sunday: 11:30 AM – 3:00 PM, 5:00 PM – 10:00 PM</p>
               </div>
             </div>
 

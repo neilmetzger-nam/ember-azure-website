@@ -49,17 +49,16 @@ export default function Home() {
     <>
       {/* Hero */}
       <section className="relative flex min-h-screen items-center justify-center overflow-hidden">
-        <Image
-          src="/images/wood-fire-grill-1.webp"
-          alt="Wood fire grill at Ember & Azure"
-          fill
-          priority
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/80" />
-
-        {/* Subtle ember glow at bottom */}
-        <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-ember/10 to-transparent" />
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 h-full w-full object-cover"
+        >
+          <source src="/videos/ember-azure-hero.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-black/50" />
 
         <EmberParticles />
 
@@ -155,37 +154,18 @@ export default function Home() {
         </div>
       </section>
 
-      {/* From the Fire — Video Section */}
-      <section className="bg-charcoal px-6 py-24">
-        <div className="mx-auto grid max-w-6xl items-center gap-12 md:grid-cols-2">
-          <div className="overflow-hidden rounded-lg shadow-xl">
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="h-full w-full object-cover"
-            >
-              <source src="/videos/whole-fish-grill.mp4" type="video/mp4" />
-              <source src="/videos/pork-ribs-on-grill.mp4" type="video/mp4" />
-            </video>
-          </div>
-          <div>
-            <h2 className="font-heading text-3xl font-bold text-ember md:text-4xl">
-              From the Fire
-            </h2>
-            <div className="mt-4 h-px w-16 bg-ember" />
-            <p className="mt-8 text-lg leading-relaxed text-warm-white/70">
-              Every protein we serve passes through our 48-inch wood fire grill.
-              You&apos;ll hear it crackle. You&apos;ll smell the smoke.
-              You&apos;ll taste the difference.
-            </p>
-            <p className="mt-4 text-sm leading-relaxed text-warm-white/50">
-              Oak, cherry, and applewood fuel the flames. Binchotan charcoal
-              for yakitori. Open flame for whole fish. Low-and-slow smoke for
-              ribs. Fire is not just how we cook — it&apos;s who we are.
-            </p>
-          </div>
+      {/* From the Fire — Text Section */}
+      <section className="bg-stone-950 px-6 py-20">
+        <div className="mx-auto max-w-3xl text-center">
+          <h2 className="font-heading text-3xl font-bold text-ember md:text-4xl">
+            Every dish begins here.
+          </h2>
+          <div className="mx-auto mt-4 h-px w-16 bg-ember" />
+          <p className="mt-8 text-lg leading-relaxed text-warm-white/70">
+            Our 48-inch wood fire grill is the heart of Ember &amp; Azure. Every
+            protein, every vegetable — touched by real flame before it reaches
+            your plate.
+          </p>
         </div>
       </section>
 
@@ -197,7 +177,7 @@ export default function Home() {
           fill
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-[#0096c7]/70" />
+        <div className="absolute inset-0 bg-[#0096c7]/80" />
         <div className="relative z-10 mx-auto max-w-4xl">
           <h2 className="font-heading text-3xl font-bold text-azure md:text-4xl">
             The Raw Bar

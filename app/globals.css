@@ -53,13 +53,23 @@ body {
   animation: float-up linear forwards, flicker 0.5s ease-in-out infinite;
 }
 
-/* Hide default ElevenLabs widget bubble */
+/* Hide default ElevenLabs widget bubble until activated */
 elevenlabs-convai {
   position: fixed;
   bottom: -9999px;
   right: -9999px;
   visibility: hidden;
   pointer-events: none;
+  --el-color-primary: #f97316;
+  --el-color-background: #1c1917;
+  --el-color-text: #fafaf9;
+  --el-border-radius: 12px;
+}
+
+elevenlabs-convai::part(container) {
+  background: #1c1917;
+  border: 1px solid #f97316;
+  border-radius: 12px;
 }
 
 /* Scrollbar styling */

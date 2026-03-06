@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
+import Script from "next/script";
 import EmberParticles from "./components/EmberParticles";
+import SpeakWithAzureButton from "./components/SpeakWithAzureButton";
 
 const featuredDishes = [
   {
@@ -110,7 +112,14 @@ export default function Home() {
               View Menu
             </Link>
           </div>
+          <SpeakWithAzureButton />
         </div>
+
+        <elevenlabs-convai agent-id="agent_8301kk0mk9h2en0btsnnxsde4q1z" />
+        <Script
+          src="https://elevenlabs.io/convai-widget/index.js"
+          strategy="lazyOnload"
+        />
       </section>
 
       {/* Story Section */}

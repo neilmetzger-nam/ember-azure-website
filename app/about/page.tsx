@@ -65,12 +65,12 @@ export default function AboutPage() {
               </h2>
               <div className="mt-3 h-px w-12 bg-ember" />
               <p className="mt-6 leading-relaxed text-warm-white/60">
-                Our 48-inch wood fire grill anchors the room. The fire glows
-                behind hand-laid tile — you feel its warmth from every seat in
-                the house. Oak, cherry, and applewood fuel the flames. We use
-                binchotan charcoal for yakitori, open flame for whole fish, and
-                low-and-slow smoke for ribs. Every cut of wood matters. Every
-                ember tells a story.
+                At the heart of Ember &amp; Azure stands our wood fire hearth
+                — a floor-to-ceiling feature that fills the room with the scent
+                of smoke and the warmth of open flame. Every protein that leaves
+                our kitchen has touched that fire. The char, the caramelization,
+                the depth of flavor — it cannot be replicated. It can only be
+                earned.
               </p>
             </div>
 
@@ -89,33 +89,32 @@ export default function AboutPage() {
               </h2>
               <div className="mt-3 h-px w-12 bg-azure" />
               <p className="mt-6 leading-relaxed text-warm-white/60">
-                Our raw bar is a counterpoint of cool precision. We source oysters
-                from both coasts, king crab from Alaska, and seasonal fish from
-                Tokyo&apos;s Tsukiji market tradition. Each piece is handled with
-                respect, served simply, and allowed to speak for itself. The ocean
-                needs no embellishment — only care.
+                Our raw bar is a celebration of the sea at its purest. Oysters
+                shucked to order. King crab cracked tableside. Hamachi crudo
+                kissed with yuzu. No heat required — just the cold, clean
+                honesty of the ocean. The water balances the fire. That tension
+                is what makes this place.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Space */}
-      <section className="px-6 py-16">
+      {/* Two Elements */}
+      <section className="bg-stone-900 px-6 py-20">
         <div className="mx-auto max-w-3xl text-center">
-          <h2 className="font-heading text-3xl font-bold text-gold">
-            The Space
+          <h2 className="font-heading text-3xl font-bold text-warm-white md:text-4xl">
+            Two Elements. One Kitchen.
           </h2>
-          <div className="mx-auto mt-4 h-px w-16 bg-gold" />
-          <p className="mt-8 text-lg leading-relaxed text-warm-white/60">
-            One hundred twenty seats surround the open kitchen and its towering
-            wood fire grill. Dark woods, warm metals, and soft lighting set the
-            mood — upscale enough for a special occasion, relaxed enough for any
-            Tuesday. The raw bar anchors one end of the room, the full bar the
-            other, and the fire commands the center.
+          <div className="mx-auto mt-4 h-px w-16 bg-ember" />
+          <p className="mt-8 text-lg leading-relaxed text-warm-white/70">
+            Ember &amp; Azure was born from a simple belief: that the most
+            compelling dining experiences are built on contrast. Fire and water.
+            Raw and roasted. Intimate and dramatic. We are a Pan-Asian kitchen
+            that respects ancient technique and embraces modern vision. Every
+            dish, every cocktail, every evening here is the result of those two
+            forces in conversation.
           </p>
-          {/* IMAGE: restaurant-interior-wide.jpg */}
-          <div className="mt-12 h-72 rounded-sm bg-gradient-to-r from-ember/10 via-charcoal to-azure/10" />
         </div>
       </section>
     </div>

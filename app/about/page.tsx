@@ -52,9 +52,9 @@ export default function AboutPage() {
           <div className="grid gap-16 md:grid-cols-2">
             {/* Fire */}
             <div>
-              <div className="relative mb-8 h-64 overflow-hidden rounded-md shadow-lg">
+              <div className="relative mb-8 h-80 overflow-hidden rounded-xl shadow-lg">
                 <Image
-                  src="/images/wood-fire-grill-2.webp"
+                  src="/images/wood-fire-grill-1.webp"
                   alt="Wood fire grill with flames behind hand-laid tile"
                   fill
                   className="object-cover"
@@ -76,7 +76,7 @@ export default function AboutPage() {
 
             {/* Water */}
             <div>
-              <div className="relative mb-8 h-96 overflow-hidden rounded-lg shadow-lg">
+              <div className="relative mb-8 h-80 overflow-hidden rounded-xl shadow-lg">
                 <Image
                   src="/images/seafood-tower-1.webp"
                   alt="Seafood tower with oysters and fresh shellfish"

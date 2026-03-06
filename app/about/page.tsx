@@ -54,7 +54,7 @@ export default function AboutPage() {
             <div>
               <div className="relative mb-8 h-80 overflow-hidden rounded-xl shadow-lg">
                 <Image
-                  src="/images/wood-fire-grill-1.webp"
+                  src="/images/pork-ribs-1.webp"
                   alt="Wood fire grill with flames behind hand-laid tile"
                   fill
                   className="object-cover"

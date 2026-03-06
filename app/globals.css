@@ -53,6 +53,15 @@ body {
   animation: float-up linear forwards, flicker 0.5s ease-in-out infinite;
 }
 
+/* Hide default ElevenLabs widget bubble */
+elevenlabs-convai {
+  position: fixed;
+  bottom: -9999px;
+  right: -9999px;
+  visibility: hidden;
+  pointer-events: none;
+}
+
 /* Scrollbar styling */
 ::-webkit-scrollbar {
   width: 8px;

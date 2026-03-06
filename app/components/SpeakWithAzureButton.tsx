@@ -2,10 +2,20 @@
 
 export default function SpeakWithAzureButton() {
   function handleClick() {
-    const widget = document.querySelector("elevenlabs-convai");
-    if (widget?.shadowRoot) {
-      const btn = widget.shadowRoot.querySelector("button");
-      btn?.click();
+    const widget = document.querySelector("elevenlabs-convai") as
+      | (HTMLElement & { open?: () => void })
+      | null;
+    if (widget) {
+      widget.style.visibility = "visible";
+      widget.style.bottom = "20px";
+      widget.style.right = "20px";
+      widget.style.pointerEvents = "auto";
+      if (typeof widget.open === "function") widget.open();
+      // Fallback: click the start call button inside shadow DOM
+      setTimeout(() => {
+        const btn = widget.shadowRoot?.querySelector("button");
+        btn?.click();
+      }, 300);
     }
   }
 

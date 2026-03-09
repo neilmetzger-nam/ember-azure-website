@@ -118,7 +118,7 @@ export default function Home() {
         <elevenlabs-convai agent-id="agent_8601kk0mr7baeep9eq8h9v38avmb" />
         <Script
           src="https://elevenlabs.io/convai-widget/index.js"
-          strategy="lazyOnload"
+          strategy="afterInteractive"
         />
       </section>
 

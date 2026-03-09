@@ -1,22 +1,40 @@
 "use client";
 
+import { useEffect, useState } from "react";
+
 export default function SpeakWithAzureButton() {
+  const [ready, setReady] = useState(false);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const widget = document.querySelector("elevenlabs-convai");
+      if (widget) { setReady(true); clearInterval(interval); }
+    }, 300);
+    setTimeout(() => clearInterval(interval), 10000);
+    return () => clearInterval(interval);
+  }, []);
+
   function handleClick() {
     const widget = document.querySelector("elevenlabs-convai") as
-      | (HTMLElement & { open?: () => void })
-      | null;
-    if (widget) {
-      widget.style.visibility = "visible";
-      widget.style.bottom = "20px";
-      widget.style.right = "20px";
-      widget.style.pointerEvents = "auto";
-      if (typeof widget.open === "function") widget.open();
-      // Fallback: click the start call button inside shadow DOM
-      setTimeout(() => {
-        const btn = widget.shadowRoot?.querySelector("button");
-        btn?.click();
-      }, 300);
-    }
+      | (HTMLElement & { open?: () => void }) | null;
+    if (!widget) return;
+
+    widget.style.visibility = "visible";
+    widget.style.display = "block";
+    widget.style.position = "fixed";
+    widget.style.bottom = "20px";
+    widget.style.right = "20px";
+    widget.style.zIndex = "9999";
+    widget.style.pointerEvents = "auto";
+
+    if (typeof widget.open === "function") { widget.open(); return; }
+
+    const tryClick = (attempts = 0) => {
+      const btn = widget.shadowRoot?.querySelector("button");
+      if (btn) { btn.click(); }
+      else if (attempts < 10) { setTimeout(() => tryClick(attempts + 1), 200); }
+    };
+    tryClick();
   }
 
   return (
@@ -29,7 +47,7 @@ export default function SpeakWithAzureButton() {
         🎙 Speak with Azure
       </button>
       <p className="mt-2 text-xs text-warm-white/40">
-        Our AI concierge is available now
+        {ready ? "Our AI concierge is available now" : "Loading concierge..."}
       </p>
     </div>
   );

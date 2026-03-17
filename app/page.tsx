@@ -343,13 +343,13 @@ export default function Home() {
             {/* Movies */}
             <div className="rounded-lg border border-white/5 bg-charcoal p-6">
               <div className="text-3xl mb-3">🎬</div>
-              <h3 className="font-heading text-lg font-bold text-warm-white">Cobb Village 14</h3>
+              <h3 className="font-heading text-lg font-bold text-warm-white">CMX Village 14</h3>
               <p className="mt-2 text-sm text-warm-white/50 leading-relaxed">
                 Catch a late show right next door. Dinner first, then the movies — the way an evening
                 out is supposed to feel. The theater is steps away from our front door.
               </p>
               <a
-                href="https://www.cobbtheatres.com/village14"
+                href="https://www.fandango.com/cmx-village-14-aawkf/theater-page"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-3 inline-block text-xs text-ember hover:text-gold transition-colors"
@@ -367,7 +367,7 @@ export default function Home() {
                 or grab a late drink with us after a few frames. Village at Leesburg has it all.
               </p>
               <a
-                href="https://www.thebranchleesburg.com"
+                href="https://bowlthebranch.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-3 inline-block text-xs text-ember hover:text-gold transition-colors"

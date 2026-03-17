@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Date Night | Ember & Azure",
   description:
-    "The perfect date night in Leesburg — dinner at Ember & Azure, movies at Cobb Village 14, bowling at The Branch.",
+    "The perfect date night in Leesburg — dinner at Ember & Azure, movies at CMX Village 14, bowling at The Branch.",
 };
 
 export default function DateNightPage() {
@@ -53,14 +53,14 @@ export default function DateNightPage() {
 
           <div className="rounded-lg border border-white/5 bg-stone-950 p-6">
             <div className="text-3xl mb-3">🎬</div>
-            <h2 className="font-heading text-xl font-bold text-warm-white">Cobb Village 14</h2>
+            <h2 className="font-heading text-xl font-bold text-warm-white">CMX Village 14</h2>
             <p className="mt-3 text-sm text-warm-white/50 leading-relaxed">
               Catch a late show right next door. Dinner first, then the movies — the way an evening
               out is supposed to feel. The theater is steps away from our front door.
               Check what is playing before you reserve your table.
             </p>
             <a
-              href="https://www.cobbtheatres.com/village14"
+              href="https://www.fandango.com/cmx-village-14-aawkf/theater-page"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-4 inline-block text-xs text-ember hover:text-gold transition-colors"
@@ -78,7 +78,7 @@ export default function DateNightPage() {
               Village at Leesburg has everything you need for a full night out.
             </p>
             <a
-              href="https://www.thebranchleesburg.com"
+              href="https://bowlthebranch.com"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-4 inline-block text-xs text-ember hover:text-gold transition-colors"

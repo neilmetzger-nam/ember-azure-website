@@ -316,6 +316,77 @@ export default function Home() {
         </div>
       </section>
 
+      {/* The Neighborhood */}
+      <section className="bg-stone-950 px-6 py-24">
+        <div className="mx-auto max-w-4xl">
+          <p className="text-xs uppercase tracking-widest text-ember mb-3">Village at Leesburg</p>
+          <h2 className="font-heading text-3xl font-bold text-warm-white md:text-4xl">
+            Make a night of it.
+          </h2>
+          <div className="mt-4 h-px w-12 bg-ember" />
+          <p className="mt-6 max-w-2xl text-warm-white/60 leading-relaxed">
+            Ember &amp; Azure is designed to be the anchor of your evening — not just dinner,
+            but a destination. Village at Leesburg puts everything you need within steps of each other.
+          </p>
+
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
+            {/* Dinner */}
+            <div className="rounded-lg border border-white/5 bg-charcoal p-6">
+              <div className="text-3xl mb-3">🔥</div>
+              <h3 className="font-heading text-lg font-bold text-warm-white">Dinner at Ember &amp; Azure</h3>
+              <p className="mt-2 text-sm text-warm-white/50 leading-relaxed">
+                Start your evening with wood-fired small plates, raw bar, craft cocktails, and something
+                from the grill. Refined casual — dress up if you feel like it.
+              </p>
+            </div>
+
+            {/* Movies */}
+            <div className="rounded-lg border border-white/5 bg-charcoal p-6">
+              <div className="text-3xl mb-3">🎬</div>
+              <h3 className="font-heading text-lg font-bold text-warm-white">Cobb Village 14</h3>
+              <p className="mt-2 text-sm text-warm-white/50 leading-relaxed">
+                Catch a late show right next door. Dinner first, then the movies — the way an evening
+                out is supposed to feel. The theater is steps away from our front door.
+              </p>
+              <a
+                href="https://www.cobbtheatres.com/village14"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-3 inline-block text-xs text-ember hover:text-gold transition-colors"
+              >
+                Showtimes →
+              </a>
+            </div>
+
+            {/* Bowling */}
+            <div className="rounded-lg border border-white/5 bg-charcoal p-6">
+              <div className="text-3xl mb-3">🎳</div>
+              <h3 className="font-heading text-lg font-bold text-warm-white">The Branch</h3>
+              <p className="mt-2 text-sm text-warm-white/50 leading-relaxed">
+                Bowling, entertainment, and good times across the street. Perfect after dinner —
+                or grab a late drink with us after a few frames. Village at Leesburg has it all.
+              </p>
+              <a
+                href="https://www.thebranchleesburg.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-3 inline-block text-xs text-ember hover:text-gold transition-colors"
+              >
+                Learn more →
+              </a>
+            </div>
+          </div>
+
+          <div className="mt-10 rounded-lg border border-ember/20 bg-ember/5 p-6 text-center">
+            <p className="text-warm-white/70 text-sm leading-relaxed">
+              <span className="text-gold font-semibold">The perfect evening:</span> Arrive at 6:30 for dinner and cocktails.
+              Wood-fired steak, raw bar, a great bottle of wine. 9:00 — walk next door for the late show.
+              Or cross the street for bowling. Village at Leesburg is built for nights like this.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Hours & Location */}
       <section className="border-t border-white/5 bg-charcoal px-6 py-24">
         <div className="mx-auto grid max-w-4xl gap-12 md:grid-cols-2">

@@ -48,12 +48,14 @@ export default function SpeakWithAzureButton() {
     widget.style.zIndex = "9999";
     widget.style.pointerEvents = "auto";
 
+    await new Promise(r => setTimeout(r, 500));
+
     if (typeof widget.open === "function") { widget.open(); setMode("voice"); return; }
 
     const tryClick = (attempts = 0) => {
       const btn = widget.shadowRoot?.querySelector("button");
       if (btn) { btn.click(); setMode("voice"); }
-      else if (attempts < 10) { setTimeout(() => tryClick(attempts + 1), 200); }
+      else if (attempts < 20) { setTimeout(() => tryClick(attempts + 1), 300); }
       else { setMode("mic-error"); }
     };
     tryClick();
@@ -148,9 +150,10 @@ export default function SpeakWithAzureButton() {
       <button
         type="button"
         onClick={handleVoiceClick}
-        className="rounded-sm border border-[#0ea5e9] px-8 py-3 text-sm font-semibold uppercase tracking-widest text-[#0ea5e9] transition-all hover:bg-[#0ea5e9]/10"
+        disabled={!ready}
+        className="rounded-sm border border-[#0ea5e9] px-8 py-3 text-sm font-semibold uppercase tracking-widest text-[#0ea5e9] transition-all hover:bg-[#0ea5e9]/10 disabled:opacity-40 disabled:cursor-not-allowed"
       >
-        🎙 Speak with Azure
+        {ready ? "🎙 Speak with Azure" : "Loading concierge..."}
       </button>
       <button
         type="button"

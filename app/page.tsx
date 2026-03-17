@@ -112,7 +112,9 @@ export default function Home() {
               View Menu
             </Link>
           </div>
-          <SpeakWithAzureButton />
+          <p className="mt-4 text-xs text-warm-white/40 tracking-widest uppercase">
+            💬 Tap the chat button below to speak with Azure
+          </p>
         </div>
 
         <elevenlabs-convai agent-id="agent_8601kk0mr7baeep9eq8h9v38avmb" allow="microphone" />

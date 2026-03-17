@@ -117,7 +117,7 @@ export default function Home() {
           </p>
         </div>
 
-        <elevenlabs-convai agent-id="agent_8601kk0mr7baeep9eq8h9v38avmb" allow="microphone" />
+        <elevenlabs-convai agent-id="agent_8301kk0mk9h2en0btsnnxsde4q1z" allow="microphone" />
         <Script
           src="https://elevenlabs.io/convai-widget/index.js"
           strategy="afterInteractive"
